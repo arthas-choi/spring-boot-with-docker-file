@@ -2,9 +2,10 @@
 Simple Dockerfile based Spring boot Project
 
 To make jar using maven
-
+```
 mvn clean package
 
+```
 To build image:
 ```
 docker build -f Dockerfile -t spring-boot-docker:v.0.1 .
