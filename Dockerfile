@@ -6,5 +6,6 @@ COPY --from=qemu /usr/bin/qemu-* /usr/bin
 
 ADD target/spring-boot-docker.jar spring-boot-docker.jar
 RUN chmod 755 spring-boot-docker.jar
+RUN rm -rf /usr/bin/qemu-*
 EXPOSE 8090
 ENTRYPOINT ["java", "-jar", "spring-boot-docker.jar"]
